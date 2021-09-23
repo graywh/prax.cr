@@ -23,7 +23,7 @@ class ProxyTest < Minitest::Test
     assert_equal "example", Net::HTTP.get(URI("http://w1.example.127.0.0.1.nip.io:20557/"))
 
     assert_equal "app1.example", Net::HTTP.get(URI("http://app1.example.127.0.0.1.nip.io:20557/"))
-    :ssert_equal "app2.example", Net::HTTP.get(URI("http://w3.app2.example.127.0.0.1.nip.io:20557/"))
+    assert_equal "app2.example", Net::HTTP.get(URI("http://w3.app2.example.127.0.0.1.nip.io:20557/"))
   end
 
   def test_returns_multiple_set_cookie_headers
